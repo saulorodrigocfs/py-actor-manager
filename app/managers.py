@@ -9,7 +9,7 @@ class ActorManager:
         self.table_name = table_name
         self.connection = sqlite3.connect(self.db_name)
         self.cursor = self.connection.cursor()
-    
+
     def create(self, first_name: str, last_name: str) -> None:
         query = f"""
         INSERT INTO {self.table_name} (first_name, last_name)
